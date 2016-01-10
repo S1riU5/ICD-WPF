@@ -12,15 +12,28 @@ namespace ICD_WPF.Data.Impl.Dao
     {
 
         private string _icdText;
+        private IEnumerable<IDataSetVo> dataSetVos; 
 
         public IEnumerable<IDataSetVo> GetADataSetVos()
         {
-            throw new NotImplementedException();
+            return dataSetVos;
         }
 
         public void SetIcdText(string icdText)
         {
             _icdText = icdText;
         }
+
+        private IEnumerable<IDataSetVo> ParsIcdText(string icdText)
+        {
+            IEnumerable<IDataSetVo> icdCatalog = new List<IDataSetVo>();
+            
+            //TODO Splitt text by LZ
+            //TODO Fillter for content
+
+
+
+            return icdCatalog;
+        } 
     }
 }
